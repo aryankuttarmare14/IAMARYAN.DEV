@@ -15,7 +15,7 @@
 
 ## 📺 Live Demo
 
-👉 **[View Live Portfolio](https://iamaryan.dev/)**  
+👉 **[View Live Portfolio](https://iamaryan-dev.vercel.app/)**  
 👉 **[Visit My GitHub](https://github.com/aryankuttarmare14)**
 
 ---
@@ -86,7 +86,7 @@ Now open http://localhost:5173 in your browser.
 
 ## 📫 Contact Me
 
-**Portfolio:** [iamaryan.dev](https://iamaryan.dev/)  
+**Portfolio:** [iamaryan.dev](https://github.com/aryankuttarmare14/IAMARYAN.DEV/)  
 **GitHub:** [@aryankuttarmare14](https://github.com/aryankuttarmare14)  
 **LinkedIn:** [Aryan Kuttarmare](https://www.linkedin.com/in/aryankuttarmare/)  
 **Email:** aryan.kuttarmare2002@gmail.com
