@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern animated background utilities */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-gradient {
+  background: linear-gradient(120deg, #0b0f1a, #161a2b, #1f2937, #0f172a);
+  background-size: 300% 300%;
+  animation: gradientShift 20s ease infinite;
+}
+
+.radial-vignette {
+  background:
+    radial-gradient(800px 500px at 15% 20%, rgba(255, 84, 38, 0.10), rgba(255, 84, 38, 0.0) 60%),
+    radial-gradient(700px 450px at 85% 15%, rgba(59, 130, 246, 0.10), rgba(59, 130, 246, 0.0) 60%),
+    radial-gradient(600px 400px at 50% 80%, rgba(236, 72, 153, 0.10), rgba(236, 72, 153, 0.0) 60%);
+}
+
+.noise-overlay {
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.035'/></svg>");
+  background-size: 180px 180px;
+  mix-blend-mode: overlay;
+}
+
+/* Colorful glow blobs */
+@keyframes blobFloat {
+  0% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(10px, -20px) scale(1.05); }
+  66% { transform: translate(-10px, 10px) scale(0.98); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+.glow-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(60px);
+  opacity: 0.6;
+  mix-blend-mode: screen;
+  animation: blobFloat 10s ease-in-out infinite;
+}
+
+.glow-blob--orange { background: radial-gradient(circle, rgba(255,77,31,0.6), rgba(255,77,31,0) 60%); }
+.glow-blob--blue { background: radial-gradient(circle, rgba(59,130,246,0.6), rgba(59,130,246,0) 60%); }
+.glow-blob--pink { background: radial-gradient(circle, rgba(236,72,153,0.6), rgba(236,72,153,0) 60%); }
+.glow-blob--teal { background: radial-gradient(circle, rgba(20,184,166,0.6), rgba(20,184,166,0) 60%); }
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(90deg, #ff7849, #60a5fa, #a78bfa, #34d399);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Glass card */
+.glass-card {
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  background: rgba(17, 24, 39, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+}
+
+/* Accent focus ring */
+.accent-ring:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 77, 31, 0.35);
+}
+
+/* Animation delay utilities for blobs */
+.anim-delay-0 { animation-delay: 0s; }
+.anim-delay-08 { animation-delay: 0.8s; }
+.anim-delay-12 { animation-delay: 1.2s; }
+.anim-delay-16 { animation-delay: 1.6s; }
+.anim-delay-24 { animation-delay: 2.4s; }
